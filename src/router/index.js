@@ -11,6 +11,11 @@ Vue.use(VueRouter)
     component: Home
   },
   {
+    path: '/english',
+    name: 'English',
+    component: () => import(/* webpackChunkName: "english" */ '../views/English.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
