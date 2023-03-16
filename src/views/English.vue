@@ -2,12 +2,17 @@
   <div class="about">
     <h1>Free-GPT-UI: Using ChatGPT 3.5 for FREE!</h1>
     <h3>Typing your question below, then click "Send" button.</h3>
+    <Dialog ref="dialog"/>
     <el-button
         class="scr-content"
         @click="sendMsg()"
         >Send</el-button
     >
-    <Dialog ref="dialog"/>
+    <el-button
+        class="scr-content"
+        @click="clearDialog()"
+        >Clear</el-button
+    >
     <h3>Related Links</h3>
     <ul>
       <li>Interface calls: <a href="https://github.com/ayaka14732/ChatGPTAPIFree" target="_blank" rel="noopener">ChatGPTAPIFree</a></li>
@@ -30,6 +35,11 @@ export default {
   methods: {
     sendMsg() {
       this.$refs.dialog.sendMsg();
+    },
+    clearDialog() {
+      this.$refs.dialog.dialog = [
+        {question: '', answer: ''},
+      ]
     }
   }
 }
@@ -49,6 +59,7 @@ li {
 }
 .scr-content {
   margin-top: 20px;
+  width: 100px;
   background-color: transparent !important;
   color: #fff;
 }
