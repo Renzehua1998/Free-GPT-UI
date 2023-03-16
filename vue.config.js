@@ -1,8 +1,9 @@
 
 
     module.exports = {
-        // outputDir:"Free-GPT-UI",
-        publicPath: process.env.NODE_ENV === "production" ? "/Free-GPT-UI/" : "/",
+        outputDir:"docs",
+        publicPath: process.env.NODE_ENV === "production" ? "/Free-GPT-UI/" : "/", // github
+        // publicPath: process.env.NODE_ENV === "production" ? "/free-gpt-ui/" : "/", // gitee
       };
   
   
